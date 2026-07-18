@@ -1,3 +1,7 @@
+// ===========================
+// TaxiPro Admin Dashboard
+// ===========================
+
 document.addEventListener("DOMContentLoaded", loadBookings);
 
 function loadBookings() {
@@ -24,103 +28,76 @@ function loadBookings() {
                     <td>${booking.date}</td>
                     <td>${booking.time || "-"}</td>
                     <td>${booking.status || "Pending"}</td>
-
                     <td>
-
-                        <button onclick="acceptBooking('${booking._id}')">
-                            ✅ Accept
-                        </button>
-
-                        <button onclick="rejectBooking('${booking._id}')">
-                            ❌ Reject
-                        </button>
-
-                        <button onclick="deleteBooking('${booking._id}')">
-                            🗑 Delete
-                        </button>
-
+                        <button onclick="acceptBooking('${booking._id}')">✅ Accept</button>
+                        <button onclick="rejectBooking('${booking._id}')">❌ Reject</button>
+                        <button onclick="deleteBooking('${booking._id}')">🗑 Delete</button>
                     </td>
-
                 </tr>
                 `;
 
             });
 
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+            console.error(err);
+            alert("❌ Unable to load bookings.");
+        });
 
 }
 
-function acceptBooking(id){
+function acceptBooking(id) {
 
-    fetch(`http://localhost:3000/bookings/${id}`,{
-
-        method:"PUT",
-
-        headers:{
-            "Content-Type":"application/json"
+    fetch(`http://localhost:3000/bookings/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
         },
-
-        body:JSON.stringify({
-            status:"Accepted"
+        body: JSON.stringify({
+            status: "Accepted"
         })
-
     })
-    .then(res=>res.json())
-    .then(()=>{
-        alert("Booking Accepted ✅");
+    .then(res => res.json())
+    .then(() => {
+        alert("✅ Booking Accepted");
         loadBookings();
-    });
+    })
+    .catch(err => console.error(err));
 
 }
 
-function rejectBooking(id){
+function rejectBooking(id) {
 
-    fetch(`http://localhost:3000/bookings/${id}`,{
-
-        method:"PUT",
-
-        headers:{
-            "Content-Type":"application/json"
+    fetch(`http://localhost:3000/bookings/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
         },
-
-        body:JSON.stringify({
-            status:"Rejected"
+        body: JSON.stringify({
+            status: "Rejected"
         })
-
     })
-    .then(res=>res.json())
-    .then(()=>{
-        alert("Booking Rejected ❌");
+    .then(res => res.json())
+    .then(() => {
+        alert("❌ Booking Rejected");
         loadBookings();
-    });
+    })
+    .catch(err => console.error(err));
 
 }
 
-function deleteBooking(id){
+function deleteBooking(id) {
 
-    if(!confirm("Delete this booking?")) return;
+    if (!confirm("Delete this booking?")) return;
 
-    unction deleteBooking(id){
-
-    if(!confirm("Delete this booking?")) return;
-
-    fetch(`https://taxi-48yw.onrender.com/bookings/${id}`, {
-
-        method:"DELETE"
-
+    fetch(`http://localhost:3000/bookings/${id}`, {
+        method: "DELETE"
     })
-    .then(res=>res.json())
-    .then(()=>{
-        alert("Booking Deleted 🗑");
-
-        method:"DELETE"
-
-    })
-    .then(res=>res.json())
-    .then(()=>{
-        alert("Booking Deleted 🗑");
+    .then(res => res.json())
+    .then(() => {
+        alert("🗑 Booking Deleted");
         loadBookings();
-    });
+    })
+    .catch(err => console.error(err));
 
 }
