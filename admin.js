@@ -101,7 +101,18 @@ function deleteBooking(id){
 
     if(!confirm("Delete this booking?")) return;
 
-    fetch(`http://localhost:3000/bookings/${id}`,{
+    unction deleteBooking(id){
+
+    if(!confirm("Delete this booking?")) return;
+
+    fetch(`https://taxi-48yw.onrender.com/bookings/${id}`, {
+
+        method:"DELETE"
+
+    })
+    .then(res=>res.json())
+    .then(()=>{
+        alert("Booking Deleted 🗑");
 
         method:"DELETE"
 
