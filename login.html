@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaxiPro Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h2>TaxiPro Admin Login 🚖</h2>
+
+    <input type="email" id="email" placeholder="Email">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="msg"></p>
+
+</div>
+
+
+<script>
+function login(){
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+
+    if(email === "admin@taxipro.com" && password === "12345"){
+
+        alert("Login Successful");
+
+        window.location.href="admin.html";
+
+    }
+    else{
+
+        document.getElementById("msg").innerHTML="Invalid Login";
+
+    }
+
+}
+</script>
+
+
+</body>
+</html>

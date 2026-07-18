@@ -30,7 +30,15 @@ form.addEventListener("submit", function(e) {
             headers: {
                 "Content-Type": "application/json"
             },
+if (valid) {
 
+        fetch("https://taxi-48yw.onrender.com/book-cab", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
 
                 name: document.querySelector('input[placeholder="Full Name"]').value,
