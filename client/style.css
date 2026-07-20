@@ -1,0 +1,902 @@
+/* ===========================
+   TaxiPro Premium CSS
+   Part 1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#081826;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#27d8ff;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#27d8ff;
+}
+
+.login-btn{
+    text-decoration:none;
+    background:#27d8ff;
+    color:#fff;
+    padding:12px 26px;
+    border-radius:8px;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    gap:60px;
+    background:
+    linear-gradient(rgba(0,20,40,.75),rgba(0,20,40,.75)),
+    url("https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.left-content{
+    max-width:560px;
+}
+
+.left-content h4{
+    color:#27d8ff;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.left-content h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.left-content h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.left-content p{
+    line-height:1.8;
+    color:#d9f5ff;
+}
+/* ===========================
+   TaxiPro Premium CSS
+   Part 2
+=========================== */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:35px;
+}
+
+.book-now,
+.learn-more{
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.book-now{
+    background:#27d8ff;
+    color:#fff;
+}
+
+.book-now:hover{
+    background:#11b9dd;
+}
+
+.learn-more{
+    border:2px solid #27d8ff;
+    color:#27d8ff;
+}
+
+.learn-more:hover{
+    background:#27d8ff;
+    color:#fff;
+}
+
+.booking-card{
+    width:430px;
+    background:rgba(8,24,38,.80);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+    padding:35px;
+}
+
+.booking-card h3{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+.booking-card input,
+.booking-card select{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    background:#ffffff;
+}
+
+.double-input{
+    display:flex;
+    gap:15px;
+}
+
+.double-input input{
+    width:50%;
+}
+
+.booking-card button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    background:#27d8ff;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.booking-card button:hover{
+    background:#11b9dd;
+}
+/* ===========================
+   TaxiPro Premium CSS
+   Part 3 (Final)
+=========================== */
+
+.services{
+    padding:80px 8%;
+    background:#0b2033;
+}
+
+.services h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#27d8ff;
+}
+
+.service-boxes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.box{
+    background:#102b43;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(39,216,255,.25);
+}
+
+.box h3{
+    margin-bottom:15px;
+    color:#27d8ff;
+}
+
+.box p{
+    color:#dbeafe;
+    line-height:1.7;
+}
+
+.thank-you-page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+    gap:24px;
+}
+
+.thank-you-page h1{
+    font-size:45px;
+    margin-bottom:12px;
+    color:#27d8ff;
+}
+
+.thank-you-page p{
+    max-width:720px;
+    font-size:20px;
+    line-height:1.8;
+    color:#d9f5ff;
+}
+
+.thank-you-page .book-now{
+    display:inline-block;
+    text-decoration:none;
+    padding:16px 36px;
+    border-radius:12px;
+    background:#27d8ff;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.thank-you-page .book-now:hover{
+    background:#11b9dd;
+}
+
+.why-choose{
+    padding:80px 8%;
+    background:#081826;
+}
+
+.why-choose h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#27d8ff;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature{
+    background:#102b43;
+    padding:30px;
+    border-radius:15px;
+}
+
+.feature h3{
+    margin-bottom:15px;
+    color:#27d8ff;
+}
+
+.feature p{
+    color:#dbeafe;
+    line-height:1.7;
+}
+
+footer{
+    background:#06111d;
+    text-align:center;
+    padding:30px;
+}
+
+footer h3{
+    color:#27d8ff;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#bcd3e2;
+}
+
+@media (max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.service-boxes,
+.features{
+    grid-template-columns:1fr;
+}
+
+.booking-card{
+    width:100%;
+    max-width:450px;
+}
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.left-content h1{
+    font-size:42px;
+}
+
+.left-content h2{
+    font-size:26px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+}
+/* ===== TaxiPro V2 Animation ===== */
+
+@keyframes floatUp{
+    0%{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.left-content{
+    animation:floatUp 1s ease;
+}
+
+.booking-card{
+    animation:floatUp 1.2s ease;
+}
+
+.booking-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,198,255,.35);
+}
+
+.logo{
+    transition:.3s;
+}
+
+.logo:hover{
+    color:#ffffff;
+    transform:scale(1.05);
+}
+
+nav a{
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#27d8ff;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.booking-card button{
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+}
+
+.booking-card button:hover{
+    transform:scale(1.03);
+}
+/* ===== TaxiPro V2 Premium Effects ===== */
+
+body{
+    scroll-behavior:smooth;
+}
+
+.booking-card{
+    transition:all .4s ease;
+}
+
+.booking-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,198,255,.35);
+}
+
+.booking-card input,
+.booking-card select{
+    transition:.3s;
+}
+
+.booking-card input:focus,
+.booking-card select:focus{
+    border:2px solid #27d8ff;
+    box-shadow:0 0 15px rgba(39,216,255,.35);
+}
+
+.logo{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.logo:hover{
+    transform:scale(1.08);
+    color:#7be8ff;
+}
+
+nav a{
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#27d8ff;
+    text-shadow:0 0 10px rgba(39,216,255,.6);
+}
+
+.booking-card button{
+    transition:.3s;
+}
+
+.booking-card button:hover{
+    transform:scale(1.04);
+    letter-spacing:1px;
+}
+/* ===== TaxiPro V2 Card Upgrade ===== */
+
+.box,
+.feature{
+    position:relative;
+    overflow:hidden;
+    transition:all .4s ease;
+}
+
+.box::before,
+.feature::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(39,216,255,.18),
+        transparent
+    );
+    transition:.7s;
+}
+
+.box:hover::before,
+.feature:hover::before{
+    left:100%;
+}
+
+.box:hover,
+.feature:hover{
+    transform:translateY(-12px) scale(1.03);
+    border:1px solid #27d8ff;
+    box-shadow:0 20px 45px rgba(39,216,255,.30);
+}
+
+.box h3,
+.feature h3{
+    color:#27d8ff;
+}
+
+.box p,
+.feature p{
+    color:#dbeafe;
+}
+/* ===== TaxiPro V2 Heading Upgrade ===== */
+
+.services h2,
+.why-choose h2{
+
+    font-size:48px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-shadow:0 0 15px rgba(39,216,255,.4);
+    transition:.3s;
+
+}
+
+.services h2:hover,
+.why-choose h2:hover{
+
+    color:#7be8ff;
+    text-shadow:0 0 25px rgba(39,216,255,.8);
+
+}
+
+.box{
+
+    border:1px solid rgba(39,216,255,.15);
+
+}
+
+.feature{
+
+    border:1px solid rgba(39,216,255,.15);
+
+}
+/* ===== TaxiPro V2 Button Upgrade ===== */
+
+.book-now,
+.learn-more,
+.booking-card button{
+
+    position:relative;
+    overflow:hidden;
+    transition:all .35s ease;
+
+}
+
+.book-now::before,
+.learn-more::before,
+.booking-card button::before{
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.6s;
+
+}
+
+.book-now:hover::before,
+.learn-more:hover::before,
+.booking-card button:hover::before{
+
+    left:120%;
+
+}
+
+.book-now:hover,
+.learn-more:hover,
+.booking-card button:hover{
+
+    box-shadow:0 0 25px rgba(39,216,255,.45);
+
+}
+/* ===== TaxiPro V2 Icon & Card Upgrade ===== */
+
+.box h3::before{
+    content:"🚖 ";
+}
+
+.feature:nth-child(1) h3::before{
+    content:"👨‍✈️ ";
+}
+
+.feature:nth-child(2) h3::before{
+    content:"🛡️ ";
+}
+
+.feature:nth-child(3) h3::before{
+    content:"⏰ ";
+}
+
+.box,
+.feature{
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        180deg,
+        rgba(16,43,67,.95),
+        rgba(8,24,38,.95)
+    );
+
+}
+
+.box:hover,
+.feature:hover{
+
+    background:linear-gradient(
+        180deg,
+        rgba(22,60,90,1),
+        rgba(8,24,38,1)
+    );
+
+}
+
+.box p,
+.feature p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+/* ===== TaxiPro V2 Icon & Card Upgrade ===== */
+/* ===== Contact Section ===== */
+
+.contact{
+    padding:80px 8%;
+    background:#0b1622;
+}
+
+.contact h2{
+    text-align:center;
+    color:#27d8ff;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.contact-info{
+    background:#102b43;
+    padding:30px;
+    border-radius:15px;
+    color:#fff;
+}
+
+.contact-info h3{
+    color:#27d8ff;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1a3550;
+    color:white;
+}
+
+.contact-form textarea{
+    height:150px;
+    resize:none;
+}
+
+.contact-form button{
+    background:#27d8ff;
+    color:#081826;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:white;
+    color:#081826;
+}
+
+@media(max-width:900px){
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+}
+/* ===== Google Map ===== */
+
+.map{
+    padding:80px 8%;
+    background:#081826;
+}
+
+.map h2{
+    text-align:center;
+    color:#27d8ff;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.map iframe{
+    width:100%;
+    border:none;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(39,216,255,.25);
+}
+/* ===== WhatsApp Floating Button ===== */
+
+.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+    transition:.3s;
+    z-index:999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #25D366;
+}
+/* Fleet Section */
+.fleet{
+    padding:60px 8%;
+    background:#f8f9fa;
+}
+
+.fleet h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+.fleet-container{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.car-card{
+    width:320px;
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    position:relative;
+}
+
+.car-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.rating{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:#666;
+    color:#FFD700;
+    padding:8px 12px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.car-card h3{
+    margin-top:15px;
+}
+
+.book-btn{
+    width:100%;
+    padding:12px;
+    background:linear-gradient(to right,#007bff,#00b894);
+    color:white;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.call-btn{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+}
+.call-btn{
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #2196f3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    z-index: 999;
+}
+.login-box{
+
+    width:350px;
+    margin:100px auto;
+    padding:30px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 15px gray;
+    text-align:center;
+
+}
+
+
+.login-box input{
+
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+
+}
+
+
+.login-box button{
+
+    width:95%;
+    padding:12px;
+    background:#ff9800;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+
+}
