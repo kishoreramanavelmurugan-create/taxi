@@ -1,6 +1,7 @@
 // Client API configuration.
-// Local development defaults to localhost.
-// Production can override this via a global variable or by editing this file.
+// For local development, this defaults to localhost.
+// For production, set the global window.API_BASE_URL before loading the app scripts,
+// or replace this placeholder during deployment.
 (function () {
   const params = new URLSearchParams(window.location.search);
   const runtimeApiUrl =
@@ -10,7 +11,7 @@
     params.get("apiBaseUrl") ||
     (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
       ? "http://localhost:3000"
-      : "https://your-render-backend-url.onrender.com");
+      : "REPLACE_WITH_RENDER_BACKEND_URL");
 
   window.API_BASE_URL = runtimeApiUrl;
 })();
