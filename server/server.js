@@ -6,12 +6,12 @@ const Booking = require("./models/booking");
 const app = express();
 const allowedOrigins = [
   process.env.CLIENT_URL,
+  "https://taxi-1-kvpm.onrender.com",
   "http://localhost:3001",
   "http://127.0.0.1:3001",
   "http://localhost:3000",
   "http://127.0.0.1:3000"
 ].filter(Boolean);
-
 // Middleware
 app.use((req, res, next) => {
   const origin = req.get("origin");
@@ -52,9 +52,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/health", (req, res) => {
-  res.json({ ok: true, message: "Backend is healthy" });
+  res.json({
+    ok: true,
+    message: "Backend is healthy",
+    version: "v2"
+  });
 });
-
 
 // Save Booking
 app.post("/book-cab", async (req, res) => {

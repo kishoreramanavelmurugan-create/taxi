@@ -34,9 +34,9 @@ form.addEventListener("submit", function (e) {
         time: document.querySelector('input[type="time"]').value
     };
 
-    console.log("Using API base URL:", window.API_BASE_URL);
+    
 
-    fetch(`${window.API_BASE_URL}/book-cab`, {
+    fetch("/book-cab", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
