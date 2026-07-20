@@ -1,4 +1,13 @@
 // Client API configuration.
-// For local development, backend runs on port 3000.
-// For production, set window.API_BASE_URL from a deployment script or replace this value.
-window.API_BASE_URL = window.API_BASE_URL || "http://localhost:3000";
+// Local development defaults to localhost.
+// Production can override this via a global variable or by editing this file.
+(function () {
+  const runtimeApiUrl =
+    window.API_BASE_URL ||
+    window.__ENV__?.API_BASE_URL ||
+    window.__RUNTIME_CONFIG__?.API_BASE_URL ||
+    new URLSearchParams(window.location.search).get("apiBaseUrl") ||
+    "http://localhost:3000";
+
+  window.API_BASE_URL = runtimeApiUrl;
+})();

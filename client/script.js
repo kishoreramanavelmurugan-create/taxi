@@ -52,8 +52,8 @@ form.addEventListener("submit", function (e) {
         console.log(data);
     })
     .catch(error => {
-        console.error(error);
-        alert("❌ Backend Connection Failed!");
+        console.error("Booking request failed:", error);
+        alert(`❌ Backend Connection Failed! ${error.message || "Please check the API URL and backend server."}`);
     });
 });
 

@@ -40,8 +40,8 @@ function loadBookings() {
 
         })
         .catch(err => {
-            console.error(err);
-            alert("❌ Unable to load bookings.");
+            console.error("Failed to load bookings:", err);
+            alert(`❌ Unable to load bookings. ${err.message || "Please check the API URL and backend server."}`);
         });
 
 }
