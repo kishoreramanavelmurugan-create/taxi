@@ -76,3 +76,13 @@ if (bookButton) {
         bookButton.style.transform = "scale(1)";
     });
 }
+document.querySelector(".rate-btn").addEventListener("click", function () {
+    const rating = prompt("Rate your ride (1 to 5):");
+
+    if (rating >= 1 && rating <= 5) {
+        document.querySelector(".rating-box h1").innerHTML = `⭐ ${rating}.0 / 5`;
+        document.querySelector(".rating-box p").innerHTML = "Thank you for your rating!";
+    } else {
+        alert("Please enter a rating between 1 and 5.");
+    }
+});
