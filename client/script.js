@@ -86,3 +86,24 @@ document.querySelector(".rate-btn").addEventListener("click", function () {
         alert("Please enter a rating between 1 and 5.");
     }
 });
+document.getElementById("submitReview").addEventListener("click", function () {
+
+    const rating = prompt("Enter rating (1-5):");
+    const review = document.getElementById("review").value;
+
+    if (!rating || rating < 1 || rating > 5) {
+        alert("Enter a valid rating");
+        return;
+    }
+
+    const div = document.createElement("div");
+    div.className = "review-item";
+    div.innerHTML = `
+        <h3>⭐ ${rating}/5</h3>
+        <p>${review}</p>
+    `;
+
+    document.getElementById("reviewList").prepend(div);
+
+    document.getElementById("review").value = "";
+});
