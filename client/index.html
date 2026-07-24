@@ -408,12 +408,20 @@ TaxiPro
 
 
 </footer>
-
-
-
+<script>
+function logout() {
+    localStorage.removeItem("userLoggedIn");
+    alert("Logged Out Successfully");
+    window.location.href = "user-login.html";
+}
+</script>
 
 <script src="config.js"></script>
 <script src="script.js"></script>
+
+
+
+
 
 
 </body>
