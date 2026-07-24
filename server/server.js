@@ -1,7 +1,10 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 const Booking = require("./models/booking");
+
+dotenv.config({ path: path.join(__dirname, ".env") });
 
 const app = express();
 const allowedOrigins = [
@@ -40,8 +43,18 @@ app.use(express.static(path.join(__dirname, "..", "client")));
 
 
 // MongoDB Connection
+const mongoURI =
+  process.env.MONGO_URI ||
+  process.env.MONGODB_URI ||
+  process.env.MONGO_URL ||
+  "mongodb://127.0.0.1:27017/cabtaxi";
+
+if (!process.env.MONGO_URI && !process.env.MONGODB_URI && !process.env.MONGO_URL) {
+  console.log("⚠️  No MongoDB env var found. Falling back to local MongoDB at:", mongoURI);
+}
+
 mongoose
-  .connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/cabtaxi")
+  .connect(mongoURI)
   .then(() => {
     console.log("✅ MongoDB Connected Successfully");
   })
