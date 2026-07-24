@@ -6,12 +6,25 @@
     <title>TaxiPro Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
 </head>
+
 <body>
+
 <script>
-  window.API_BASE_URL = window.API_BASE_URL || "https://taxi-1-kvpm.onrender.com";
+if(localStorage.getItem("adminLoggedIn") !== "true"){
+    alert("Please login first");
+    window.location.href = "login.html";
+}
+</script>
+
+<script>
+window.API_BASE_URL = window.API_BASE_URL || "https://taxi-1-kvpm.onrender.com";
 </script>
 
 <h1>🚖 TaxiPro Admin Dashboard</h1>
+
+<button onclick="logout()" style="float:right;padding:10px 20px;background:red;color:white;border:none;border-radius:5px;cursor:pointer;">
+    Logout
+</button>
 
 <table id="bookingTable" border="1" cellspacing="0" cellpadding="10">
     <thead>
@@ -36,8 +49,17 @@
 
 </table>
 
+<script>
+function logout(){
+    localStorage.removeItem("adminLoggedIn");
+    alert("Logged Out Successfully");
+    window.location.href="login.html";
+}
+</script>
+
 <script src="config.js"></script>
 <script src="admin.js"></script>
+
 
 </body>
 </html>

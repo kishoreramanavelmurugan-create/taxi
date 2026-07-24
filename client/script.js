@@ -35,30 +35,32 @@ form.addEventListener("submit", function (e) {
     };
 
     
+const API_URL = "http://localhost:3000";
 
-    fetch("/book-cab", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(bookingData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            window.location.href = "thankyou.html";
-        } else {
-            alert("❌ Booking Failed! Please try again.");
-        }
+fetch(`${API_URL}/book-cab`, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(bookingData)
+})
+.then(response => response.json())
+.then(data => {
+    if (data.success) {
+        window.location.href = "thankyou.html";
+    } else {
+        alert("❌ Booking Failed! Please try again.");
+    }
 
-        console.log(data);
-    })
-    .catch(error => {
-        console.error("Booking request failed:", error);
-        alert(`❌ Backend Connection Failed! ${error.message || "Please check the API URL and backend server."}`);
-    });
+    console.log(data);
+})
+.catch(error => {
+    console.error("Booking request failed:", error);
+    alert(`❌ Backend Connection Failed! ${error.message}`);
 });
 
+});
+    
 // ===========================
 // Button Animation
 // ===========================

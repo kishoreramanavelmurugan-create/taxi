@@ -12,11 +12,15 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://127.0.0.1:3000"
 ].filter(Boolean);
+const isAllowedOrigin = (origin) =>
+  !origin ||
+  allowedOrigins.includes(origin) ||
+  /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
 // Middleware
 app.use((req, res, next) => {
   const origin = req.get("origin");
 
-  if (!origin || allowedOrigins.includes(origin)) {
+  if (isAllowedOrigin(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin || "*");
     res.setHeader("Access-Control-Allow-Credentials", "true");
     res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
