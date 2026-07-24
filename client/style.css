@@ -900,3 +900,52 @@ nav a:hover{
     cursor:pointer;
 
 }
+/* Contact Section */
+.contact-section{
+    padding:80px 8%;
+    background:#0b1622;
+    color:#fff;
+}
+
+footer{
+    background:#06111d;
+    text-align:center;
+    padding:30px;
+}
+
+/* Rating Section */
+.rating-section{
+    padding:60px 20px;
+    text-align:center;
+    background:#f8f9fa;
+}
+
+.rating-box{
+    max-width:450px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.rating-box h1{
+    color:#ffb400;
+    font-size:40px;
+}
+
+.stars{
+    font-size:35px;
+    color:#ffb400;
+    margin:15px 0;
+}
+
+.rate-btn{
+    background:#007bff;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
